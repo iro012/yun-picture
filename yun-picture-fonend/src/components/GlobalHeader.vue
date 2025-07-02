@@ -40,7 +40,7 @@ const items = ref<MenuProps['items']>([
       </a-col>
       <a-col flex="200px">
         <div class="login-button">
-          <a-button type="primary">登录</a-button>
+          <a-button @click="() => router.replace('/user/login')" type="primary">登录</a-button>
         </div>
       </a-col>
     </a-row>
