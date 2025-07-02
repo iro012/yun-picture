@@ -1,9 +1,8 @@
 package com.lhq.yunpicturebackend.controller;
 
-import com.lhq.yunpicturebackend.common.BaseReSponse;
+import com.lhq.yunpicturebackend.common.BaseResponse;
 import com.lhq.yunpicturebackend.common.ResultUtils;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -15,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class HealthController {
     
     @GetMapping("/health")
-    public BaseReSponse<String> health() {
+    public BaseResponse<String> health() {
         return ResultUtils.success("ok");
     }
 }

@@ -13,7 +13,7 @@ public enum ErrorCode {
     SUCCESS(0, "ok"),
     PARAMS_ERROR(40000, "请求参数错误"),
     NOT_LOGIN_ERROR(40100, "账号未登录"),
-    NO_AUTO_ERROR(40101, "无权限"),
+    NO_AUTH_ERROR(40101, "无权限"),
     NOT_FOUND_ERROR(40400, "请求数据不存在"),
     SYSTEM_ERROR(50000, "系统错误"),
     OPERATION_ERROR(50001, "操作失败");

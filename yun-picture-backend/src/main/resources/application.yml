@@ -6,6 +6,14 @@ spring:
     url: jdbc:mysql://localhost:3306/yun_picture
     username: root
     password: 123456
+  data:
+    redis:
+      port: 6379
+      host: localhost
+      database: 1 #修改存储数据的redis库
+  session:
+    timeout: 86400 #session的过期时间
+    store-type: redis #session 的存储位置
 mybatis-plus:
   configuration:
     # 驼峰命名转换
@@ -14,7 +22,7 @@ mybatis-plus:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
     global-config:
       db-config:
-        logic-delete-field: deleted  # 全局逻辑删除的实体字段名
+        logic-delete-field: isDelete  # 全局逻辑删除的实体字段名
         logic-delete-value: 1  # 逻辑已删除值(默认为 1)
         logic-not-delete-value: 0  # 逻辑未删除值(默认为 0)
 # springdoc-openapi项目配置

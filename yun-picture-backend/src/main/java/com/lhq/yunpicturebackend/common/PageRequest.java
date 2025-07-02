@@ -2,6 +2,8 @@ package com.lhq.yunpicturebackend.common;
 
 import lombok.Data;
 
+import java.io.Serializable;
+
 /**
  * @author lhq
  * @version 1.0
@@ -9,7 +11,7 @@ import lombok.Data;
  * 分页请求通用类
  */
 @Data
-public class PageRequest {
+public class PageRequest implements Serializable {
     /**
      * 当前页号
      */
@@ -18,7 +20,7 @@ public class PageRequest {
     /**
      * 页面大小
      */
-    private long size = 10;
+    private long pageSize = 10;
     
     /**
      * 排序字段
@@ -29,4 +31,6 @@ public class PageRequest {
      * 排序顺序（默认降序）
      */
     private String sortOrder = "descend";
+    
+    private final long serialVersionUID = 1L;
 }

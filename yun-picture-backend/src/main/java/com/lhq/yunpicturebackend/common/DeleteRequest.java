@@ -2,6 +2,8 @@ package com.lhq.yunpicturebackend.common;
 
 import lombok.Data;
 
+import java.io.Serializable;
+
 /**
  * @author lhq
  * @version 1.0
@@ -9,10 +11,12 @@ import lombok.Data;
  * 删除请求通用类
  */
 @Data
-public class DeleteRequest {
+public class DeleteRequest implements Serializable {
     
     /**
      * id
      */
     private long id;
+    
+    private final long serialVersionUID = 1L;
 }

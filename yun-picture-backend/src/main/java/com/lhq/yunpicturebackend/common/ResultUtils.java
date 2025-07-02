@@ -9,19 +9,19 @@ import com.lhq.yunpicturebackend.exception.ErrorCode;
  * 通用返回工具类
  */
 public class ResultUtils {
-    public static <T> BaseReSponse<T> success(T data) {
-        return new BaseReSponse<>(0, "ok", data);
+    public static <T> BaseResponse<T> success(T data) {
+        return new BaseResponse<>(0, data, "ok");
     }
     
-    public static BaseReSponse error(ErrorCode errorCode) {
-        return new BaseReSponse<>(errorCode);
+    public static BaseResponse error(ErrorCode errorCode) {
+        return new BaseResponse<>(errorCode);
     }
     
-    public static BaseReSponse error(ErrorCode errorCode, String message) {
-        return new BaseReSponse<>(errorCode.getCode(), message);
+    public static BaseResponse error(ErrorCode errorCode, String message) {
+        return new BaseResponse<>(errorCode.getCode(), message);
     }
     
-    public static BaseReSponse error(int code, String message) {
-        return new BaseReSponse<>(code, message);
+    public static BaseResponse error(int code, String message) {
+        return new BaseResponse<>(code,null ,message);
     }
 }
